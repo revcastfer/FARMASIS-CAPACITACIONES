@@ -45,9 +45,14 @@ top:"0px",left:"0px"
 
 const inputs={width: "80%", padding:"8px", borderRadius:"8px",border:"1px solid grey"};
 const buton={width: "80%", padding:"8px", borderRadius:"8px",border:"none", backgroundColor:"#09b5c1"};
+ 
+let logeo=()=>{let usuario=document.getElementById("ususario").value;
+let contraseña=document.getElementById("contraseña").value;
+	window.localStorage.setItem("usuario",usuario)}
 
 
 export default function Login(){
+
 
 return(
 <PanInicial> 
@@ -56,7 +61,7 @@ return(
     <Ingreso>
 	<span><h4>acceso a usuarios</h4></span> 
 	
-	<form>
+	<form onSubmit={logeo}>
 	<ComboSearch />
 		<div>
 		<input style={inputs} placeholder="usuario" type="text" id="ususario"/>

@@ -8,7 +8,9 @@ const demo=[
 	{label:"farmacia2",value:"farmacia2"},
 	{label:"farmacia3",value:"farmacia3"},
 	{label:"farmacia4",value:"farmacia4"},
-	{label:"farmacia5",value:"farmacia5"}
+	{label:"farmacia5",value:"farmacia5"},
+	{label:"farmacia6",value:"farmacia6"},
+	{label:"farmacia7",value:"farmacia7"}
 	];
 
 
