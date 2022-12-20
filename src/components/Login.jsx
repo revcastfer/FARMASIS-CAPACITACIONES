@@ -4,6 +4,14 @@ import styled from "styled-components";
 import logo from './imgs/logosinfondo.png';
 import fondo from './imgs/fondoLog.jpg';
 import ComboSearch from './ComboSearch'
+import {createStore} from 'redux';
+import reducer from './reducer';
+import {useDispatch} from 'react-redux';
+import {loguin,logout} from './actions.js';
+
+
+
+export const store=createStore(reducer);
 
 
 const PanInicial=styled.div`
@@ -45,13 +53,16 @@ top:"0px",left:"0px"
 
 const inputs={width: "80%", padding:"8px", borderRadius:"8px",border:"1px solid grey"};
 const buton={width: "80%", padding:"8px", borderRadius:"8px",border:"none", backgroundColor:"#09b5c1"};
+
+
  
-let logeo=()=>{let usuario=document.getElementById("ususario").value;
-let contraseña=document.getElementById("contraseña").value;
-	window.localStorage.setItem("usuario",usuario)}
+
 
 
 export default function Login(){
+
+let dispatch=useDispatch();
+let usuario=document.getElementById("ususario").value;
 
 
 return(
@@ -61,7 +72,7 @@ return(
     <Ingreso>
 	<span><h4>acceso a usuarios</h4></span> 
 	
-	<form onSubmit={logeo}>
+	<form onSubmit={dispatch(loguin(usuario))}>
 	<ComboSearch />
 		<div>
 		<input style={inputs} placeholder="usuario" type="text" id="ususario"/>
