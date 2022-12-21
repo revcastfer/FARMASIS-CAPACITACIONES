@@ -4,10 +4,9 @@ import styled from "styled-components";
 import logo from './imgs/logosinfondo.png';
 import fondo from './imgs/fondoLog.jpg';
 import ComboSearch from './ComboSearch'
-
-import reducer from './reducer';
 import {useDispatch,useSelector} from 'react-redux';
 import {loguin,logout} from './actions.js';
+import store from './store';
 
 
 
@@ -61,7 +60,11 @@ export default function Login(){
 
 let estadoUsusario=useSelector(state=>state.usuario);
 let dispatch=useDispatch();
-let usuario=document.getElementById("usuario").value;
+let usuario="";
+
+window.onload=function(){usuario=document.querySelector("#usuario").value;}
+
+let handleChangeUserImput=(e)=>{ usuario= e.target.value ; console.log(usuario);  }
 
 
 return(
@@ -71,10 +74,10 @@ return(
     <Ingreso>
 	<span><h4>acceso a usuarios</h4></span> 
 	
-	<form onSubmit={dispatch(loguin(usuario))}>
+	<form onSubmit={()=>dispatch(loguin(usuario))}>
 	<ComboSearch />
 		<div>
-		<input style={inputs} placeholder="usuario" type="text" id="usuario" value={estadoUsusario}/>
+		<input style={inputs} placeholder="usuario" type="text" id="usuario" onChange={handleChangeUserImput} />
 	</div>
 	<div>
 		<input style={inputs} placeholder="Contraseña" type="text" id="contraseña"/>
