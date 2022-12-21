@@ -4,14 +4,11 @@ import styled from "styled-components";
 import logo from './imgs/logosinfondo.png';
 import fondo from './imgs/fondoLog.jpg';
 import ComboSearch from './ComboSearch'
-import {createStore} from 'redux';
+
 import reducer from './reducer';
-import {useDispatch} from 'react-redux';
+import {useDispatch,useSelector} from 'react-redux';
 import {loguin,logout} from './actions.js';
 
-
-
-export const store=createStore(reducer);
 
 
 const PanInicial=styled.div`
@@ -61,8 +58,10 @@ const buton={width: "80%", padding:"8px", borderRadius:"8px",border:"none", back
 
 export default function Login(){
 
+
+let estadoUsusario=useSelector(state=>state.usuario);
 let dispatch=useDispatch();
-let usuario=document.getElementById("ususario").value;
+let usuario=document.getElementById("usuario").value;
 
 
 return(
@@ -75,7 +74,7 @@ return(
 	<form onSubmit={dispatch(loguin(usuario))}>
 	<ComboSearch />
 		<div>
-		<input style={inputs} placeholder="usuario" type="text" id="ususario"/>
+		<input style={inputs} placeholder="usuario" type="text" id="usuario" value={estadoUsusario}/>
 	</div>
 	<div>
 		<input style={inputs} placeholder="Contraseña" type="text" id="contraseña"/>
