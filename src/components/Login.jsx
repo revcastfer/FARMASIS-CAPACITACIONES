@@ -6,7 +6,7 @@ import fondo from './imgs/fondoLog.jpg';
 import ComboSearch from './ComboSearch'
 import {useDispatch,useSelector} from 'react-redux';
 import {loguin,logout} from './actions.js';
-import store from './store';
+
 
 
 
@@ -58,7 +58,7 @@ const buton={width: "80%", padding:"8px", borderRadius:"8px",border:"none", back
 export default function Login(){
 
 
-let estadoUsusario=useSelector(state=>state.usuario);
+
 let dispatch=useDispatch();
 let usuario="";
 
@@ -74,7 +74,7 @@ return(
     <Ingreso>
 	<span><h4>acceso a usuarios</h4></span> 
 	
-	<form onSubmit={()=>dispatch(loguin(usuario))}>
+	<form onSubmit={()=>{dispatch(loguin(usuario))}}>
 	<ComboSearch />
 		<div>
 		<input style={inputs} placeholder="usuario" type="text" id="usuario" onChange={handleChangeUserImput} />
