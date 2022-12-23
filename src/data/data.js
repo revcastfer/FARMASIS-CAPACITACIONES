@@ -1,10 +1,10 @@
- const data={
-	fundamentos:{
+ const data=[
+	{fundamentos:{
 
-	usuarios:{titulo:"usuarios",descripcion:"ususarios ususarios ususarios ususarios ususarios ususarios", 
+	usuarios:{titulo:"administracion de usuarios",descripcion:"ususarios ususarios ususarios ususarios ususarios ususarios", 
 	url:"https://drive.google.com/file/d/1oN6krazTGg8WZJ9ihnAtllPkLDqzV_Nz/view?usp=share_link"},
 
-	precios:{titulo:"precios",descripcion:"precios precios precios precios precios precios precios",
+	precios:{titulo:"edicion de precios",descripcion:"precios precios precios precios precios precios precios",
 	url: "https://drive.google.com/file/d/1F6WIlqr7kLz6gX7MgiLAURA5XMcKW-K_/view?usp=share_link"},
 
 	productos:{titulo:"creacion de productos",descripcion:"productos productos productos productos productos productos ",
@@ -22,23 +22,23 @@
     ventas:{titulo:"ventas", decripcion:"ventas ventas ventas ventas ventas ventas ventas ventas ventas ventas ",
     url:"https://drive.google.com/file/d/1GizlnSS_yu2U5KHg9J9m8gOrJdv2uRpL/view?usp=share_link"},
 
-    sunat:{titulo:"envios sunat",descripcion:"envios sunat envios sunat envios sunat envios sunat envios sunat envios sunat ",
+    sunat:{titulo:"envios a sunat",descripcion:"envios sunat envios sunat envios sunat envios sunat envios sunat envios sunat ",
     url:"https://drive.google.com/file/d/16lVWe6zGgF72pgjDwXmCo14u6jAFH_OW/view?usp=share_link"},
 
-    compras:{titulo:"compras",descripcion:"compras compras compras compras compras compras compras compras compras ",
+    compras:{titulo:"ingreso de compras",descripcion:"compras compras compras compras compras compras compras compras compras ",
     url:"https://drive.google.com/file/d/1ljHnVTGx2O9wrPSs3k5WfE8ZQkhEpi6_/view?usp=share_link"},
 
-    vencimiento:{titulo:"fechas de vencimiento",descripcion:"fechas de vencimiento fechas de vencimiento fechas de vencimiento",
+    vencimiento:{titulo:"detalle de fechas de vencimiento",descripcion:"fechas de vencimiento fechas de vencimiento fechas de vencimiento",
     url:"https://drive.google.com/file/d/1V5vCDvF6xRE8CRIAqQWHX1MTrcx81Wua/view?usp=share_link"},
 
     guias:{titulo:"guias electronicas",descripcion:"guias electronicas guias electronicas guias electronicas guias electronicas",
     url:"https://drive.google.com/file/d/1q0DVX6D0i7-QB6jVJOfNXQVBOlmCR-gj/view?usp=share_link"}, 
 
-    digemid:{titulo:"envios digemid", descripcion:"envios digemid envios digemid envios digemid envios digemid envios digemid",
-    url:" https://drive.google.com/file/d/1BgNDAZ5hmQBy7olAHzs5uOebUfpbLiK8/view?usp=share_link"}},
+    digemid:{titulo:"envios a digemid", descripcion:"envios digemid envios digemid envios digemid envios digemid envios digemid",
+    url:" https://drive.google.com/file/d/1BgNDAZ5hmQBy7olAHzs5uOebUfpbLiK8/view?usp=share_link"}}},
 
 
-    extras:{
+   { extras:{
 
 
     arqueo:{titulo:"arqueo de caja", descripcion:"arqueo de caja arqueo de caja arqueo de caja arqueo de caja arqueo de caja",
@@ -55,9 +55,9 @@
 
     contable:{titulo:"reg de ventas contable",descripcion:"reg de ventas contable reg de ventas contable reg de ventas contable ",url:"https://drive.google.com/file/d/1Mp6Z1GZPYHytVBW3_OG0xm98HH_tdq2K/view?usp=share_link"},
 
-    receta:{titulo:"ventas con receta medica",descripcion:"ventas con receta medica ventas con receta medica ventas con receta medica",url:"https://drive.google.com/file/d/1QotAX7JR-bHTOtSOSow8nDA0xbO65RlO/view?usp=share_link"}},
-
-    cortos:{
+    receta:{titulo:"ventas con receta medica",descripcion:"ventas con receta medica ventas con receta medica ventas con receta medica",url:"https://drive.google.com/file/d/1QotAX7JR-bHTOtSOSow8nDA0xbO65RlO/view?usp=share_link"}}
+},
+  {  cortos:{
     codBarras:{titulo:"codigo de barras",descripcion:"codigo de barras codigo de barras codigo de barras codigo de barras ",
     url:"https://drive.google.com/file/d/1cMW9477OIpHCJa7h3kWa7kY2nTYWEtcS/view?usp=share_link"},
 
@@ -68,7 +68,7 @@
 
     sinStock:{titulo:"productos no vendidos por falta de stock",descripcion:" sinStock  sinStock  sinStock  sinStock  sinStock ",url:"https://drive.google.com/file/d/1srHeNSaByVGoochauxyJRnkwU8krJkgB/view?usp=share_link"},
 
-    resumenAnulacion:{titulo:"envios por resumen y anulacion de comprobantes",descripcion:"resumenAnulacion resumenAnulacion resumenAnulacion resumenAnulacion resumenAnulacion",url:"https://drive.google.com/file/d/1ndYbpriqJgBjD6cVczmgDWUjCcNybZmy/view?usp=share_link"}} } ;
+    resumenAnulacion:{titulo:"envios por resumen y anulacion de comprobantes",descripcion:"resumenAnulacion resumenAnulacion resumenAnulacion resumenAnulacion resumenAnulacion",url:"https://drive.google.com/file/d/1ndYbpriqJgBjD6cVczmgDWUjCcNybZmy/view?usp=share_link"}}} ] ;
       
 
       export default data;
