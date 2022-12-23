@@ -1,4 +1,4 @@
-const data={
+ const data={
 	fundamentos:{
 
 	usuarios:{titulo:"usuarios",descripcion:"ususarios ususarios ususarios ususarios ususarios ususarios", 
@@ -68,5 +68,7 @@ const data={
 
     sinStock:{titulo:"productos no vendidos por falta de stock",descripcion:" sinStock  sinStock  sinStock  sinStock  sinStock ",url:"https://drive.google.com/file/d/1srHeNSaByVGoochauxyJRnkwU8krJkgB/view?usp=share_link"},
 
-    resumenAnulacion:{titulo:"envios por resumen y anulacion de comprobantes",descripcion:"resumenAnulacion resumenAnulacion resumenAnulacion resumenAnulacion resumenAnulacion",url:"https://drive.google.com/file/d/1ndYbpriqJgBjD6cVczmgDWUjCcNybZmy/view?usp=share_link"}} } 
+    resumenAnulacion:{titulo:"envios por resumen y anulacion de comprobantes",descripcion:"resumenAnulacion resumenAnulacion resumenAnulacion resumenAnulacion resumenAnulacion",url:"https://drive.google.com/file/d/1ndYbpriqJgBjD6cVczmgDWUjCcNybZmy/view?usp=share_link"}} } ;
       
+
+      export default data;
