@@ -1,7 +1,8 @@
 
+let localIsLogin=window.localStorage.getItem("isloguin");
+let localUser=window.localStorage.getItem("usuario");
 
-
-const initialState= {isloguin:false, usuario:""};
+const initialState= {isloguin:localIsLogin,usuario:localUser};
 
 export default function reducer(state= initialState,action){
 	switch(action.type){
