@@ -64,7 +64,8 @@ let usuario="";
 
 window.onload=function(){usuario=document.querySelector("#usuario").value;}
 
-let handleChangeUserImput=(e)=>{ usuario= e.target.value ; console.log(usuario);  }
+let handleChangeUserImput=(e)=>{ usuario= e.target.value  }
+let handleSubmit=(e)=>{e.preventDefault();dispatch(loguin(usuario)) }
 
 
 return(
@@ -74,13 +75,13 @@ return(
     <Ingreso>
 	<span><h4>acceso a usuarios</h4></span> 
 	
-	<form onSubmit={()=>{dispatch(loguin(usuario))}}>
+	<form onSubmit={handleSubmit}>
 	<ComboSearch />
 		<div>
 		<input style={inputs} placeholder="usuario" type="text" id="usuario" onChange={handleChangeUserImput} />
 	</div>
 	<div>
-		<input style={inputs} placeholder="Contraseña" type="text" id="contraseña"/>
+		<input style={inputs} placeholder="Contraseña" type="password" id="contraseña"/>
 	</div> 
 	<button style={buton}>ingresar</button>
 	</form>
