@@ -13,13 +13,16 @@ function App() {
   return (
   <BrowserRouter>
     <Routes>
+
        <Route path="/" element={<Public />} >       
          <Route path="/Login" element={<Login />} />
-       <Route />
+       </Route >
+
        <Route path="/Private" element={<Private/>} >
-         <Route path="/Home" element={<Home/>} />    
+         <Route path="/Private/Home" element={<Home/>} />    
        </Route>
-     </Routes>
+
+    </Routes>
 
    </BrowserRouter>)
 }
