@@ -1,11 +1,13 @@
 
 import React from 'react';
 import styled from "styled-components";
+import {Navigate} from 'react-router-dom'
 import logo from './imgs/logosinfondo.png';
 import fondo from './imgs/fondoLog.jpg';
 import ComboSearch from './ComboSearch'
 import {useDispatch,useSelector} from 'react-redux';
-import {loguin,logout} from './actions.js';
+import {loguin} from './actions.js';
+
 
 
 
@@ -57,8 +59,6 @@ const buton={width: "80%", padding:"8px", borderRadius:"8px",border:"none", back
 
 export default function Login(){
 
-
-
 let dispatch=useDispatch();
 let usuario="";
 
@@ -67,6 +67,9 @@ window.onload=function(){usuario=document.querySelector("#usuario").value;}
 let handleChangeUserImput=(e)=>{ usuario= e.target.value  }
 let handleSubmit=(e)=>{e.preventDefault();dispatch(loguin(usuario)) }
 
+let isLogin=useSelector(state=>state.isloguin);
+if(isLogin===true){
+	return <Navigate to="./Home/Tutoriales" /> }
 
 return(
 <PanInicial> 

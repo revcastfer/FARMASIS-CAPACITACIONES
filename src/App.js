@@ -1,30 +1,31 @@
 
 import  React from 'react';
-import Login from './components/Login.jsx';
-import Home from './components/Home.jsx';
-import { BrowserRouter,Routes,Route,Link } from 'react-router-dom';
-import Public from "./routes/Public";
-import Private from "./routes/Private";
+import Login from './components/Login.jsx'
+import Home from './components/Home.jsx'
+import {Routes,Route,Link } from 'react-router-dom'
+import Tutoriales from './components/Tutoriales.jsx'
+
 
 
 
 
 function App() {
   return (
-  <BrowserRouter>
+  
     <Routes>
 
-       <Route path="/" element={<Public />} >       
-         <Route path="/Login" element={<Login />} />
-       </Route >
-
-       <Route path="/Private" element={<Private/>} >
-         <Route path="/Private/Home" element={<Home/>} />    
-       </Route>
+          <Route path="/" element={<Login />} /> 
+                    
+          <Route path="/Home" element={<Home/>} >
+           <Route path="Tutoriales" element={<Tutoriales/>}/ >
+          </Route>
+     
 
     </Routes>
 
-   </BrowserRouter>)
+  
+
+   )
 }
 
 export default App;
