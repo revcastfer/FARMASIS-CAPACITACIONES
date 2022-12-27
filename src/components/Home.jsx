@@ -9,14 +9,17 @@ export default function Home(){
 
 
 let dispatch=useDispatch();
+let user=useSelector(state=>state.usuario);
 let isLogin=useSelector(state=>state.isloguin);
-    if(isLogin===false){
+    if(isLogin==="false"){
 	return <Navigate to="/" /> }
 
 	return (
 		<div>
-		<div>navbar</div>
-		<label onClick={()=>dispatch(logout())} >logout</label>
+		<div>Referidos </div>
+		<div>Video-tutoriales</div>
+		<div >Bienvenido: {user}</div>
+		<div ><span onClick={()=>dispatch(logout())} >logout</span></div>
 		
 
 		<Outlet/>

@@ -7,7 +7,7 @@ for (let tit in props.lista){ nameGroup=tit };
 
 
 return(
- <ul><span>{nameGroup}</span>
+ <ul><h3>{nameGroup}</h3>
 <Titulo objeto={props.lista[nameGroup]} />
  </ul> )
 }
