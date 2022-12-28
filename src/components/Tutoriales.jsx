@@ -4,7 +4,14 @@ import data from '../data/data.js'
 import styled from "styled-components";
 import {useSelector} from 'react-redux';
 
+const Titulovideos=styled.h1`
+font-size: 40px;color: #29d8db
+`
 
+const Descripcionvideos=styled.div`
+font-size: 20px;
+color grey
+`
 
 const ContenedorVideos=styled.div`
 display:flex
@@ -20,9 +27,9 @@ return	(<div>
    <ContenedorVideos>
 	<Categoria data={data} />
 	<div>
-		<h4>{titulo}</h4>
+		<Titulovideos>{titulo}</Titulovideos>
 		<video src={url}/>
-		<div>{descripcion}</div>
+		<Descripcionvideos>{descripcion}</Descripcionvideos>
 
 	</div>
 	</ContenedorVideos>

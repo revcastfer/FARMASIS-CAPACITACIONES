@@ -1,5 +1,8 @@
 import {useDispatch} from 'react-redux';
-import {selectVideo} from './actions'
+import {selectVideo} from './actions';
+import styled from "styled-components";
+
+
 
 export default function Titulo(props){
 
@@ -20,7 +23,7 @@ return props.objeto[obj]}
 
 	return(
 		<div>
-		{nameObjs.map(name=><div onClick={()=>dispatch(selectVideo(search(name)))} > {name} </div>)}
+		{nameObjs.map(name=><div id={name} onClick={()=>dispatch(selectVideo(search(name))) } > {name} </div>)}
 	   </div>)
 
 }

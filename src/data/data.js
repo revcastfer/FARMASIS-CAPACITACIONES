@@ -2,9 +2,9 @@
 	{fundamentos:{
 
 	usuarios:{titulo:"administracion de usuarios",descripcion:"ususarios ususarios ususarios ususarios ususarios ususarios", 
-	url:"https://drive.google.com/file/d/1oN6krazTGg8WZJ9ihnAtllPkLDqzV_Nz/view?usp=share_link"},
+	url:"../components/video de prueba/Administracion de usuarios.m4v"},
 
-	precios:{titulo:"edicion de precios",descripcion:"precios precios precios precios precios precios precios",
+	precios:{titulo:"Edicion de precios",descripcion:"precios precios precios precios precios precios precios",
 	url: "https://drive.google.com/file/d/1F6WIlqr7kLz6gX7MgiLAURA5XMcKW-K_/view?usp=share_link"},
 
 	productos:{titulo:"creacion de productos",descripcion:"productos productos productos productos productos productos ",
@@ -19,7 +19,7 @@
     prepedidos:{titulo:"prepedidos", descripcion:"prepedidos prepedidos prepedidos prepedidos prepedidos ",
     url:"https://drive.google.com/file/d/1sX-pmNNSGn0LHY1JvO-BHfyW08yQpj5a/view?usp=share_link"},
 
-    ventas:{titulo:"ventas", decripcion:"ventas ventas ventas ventas ventas ventas ventas ventas ventas ventas ",
+    ventas:{titulo:"ventas", descripcion:"ventas ventas ventas ventas ventas ventas ventas ventas ventas ventas",
     url:"https://drive.google.com/file/d/1GizlnSS_yu2U5KHg9J9m8gOrJdv2uRpL/view?usp=share_link"},
 
     sunat:{titulo:"envios a sunat",descripcion:"envios sunat envios sunat envios sunat envios sunat envios sunat envios sunat ",

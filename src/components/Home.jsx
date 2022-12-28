@@ -3,6 +3,50 @@ import {useDispatch,useSelector} from 'react-redux';
 import {logout} from './actions.js';
 import {Outlet} from 'react-router-dom'
 import {Navigate} from 'react-router-dom'
+import logo from './imgs/logosinfondo.png';
+import olas from './imgs/olas.jpg';
+
+const imgStyle={width: "200px",
+height: "100px" ,
+display:"block"};
+
+const olasStyle={height: "35px"};
+
+const userStyle={
+	fontSize:"38px",
+	color:"#01578c",
+};
+
+
+
+
+const Navbar=styled.div`
+position: relative;
+flex-direction: column;
+display: flex;
+background-color: #eeeeee;
+
+`
+const UserInfo=styled.div`
+position: absolute;
+right:0px;
+top:0px;
+display: flex;
+justify-content:flex-end;
+flex-direction: column;
+margin:0px
+`
+const LogoutStyle=styled.div`
+position: absolute;
+right:0px;
+top:35px;
+color:blue`
+
+const Opciones=styled.div`
+position: relative;
+display: flex;
+justify-content: space-around`
+
 
 
 export default function Home(){
@@ -16,11 +60,22 @@ let isLogin=useSelector(state=>state.isloguin);
 
 	return (
 		<div>
+		<Navbar>
+		
+		<img src={logo} style={imgStyle}/>
+		
+
+        <Opciones>
 		<div>Referidos </div>
 		<div>Video-tutoriales</div>
-		<div >Bienvenido: {user}</div>
-		<div ><span onClick={()=>dispatch(logout())} >logout</span></div>
-		
+       </Opciones>
+
+		<UserInfo>
+		<div style={userStyle}>Bienvenido: {user}</div>
+		<LogoutStyle><span onClick={()=>dispatch(logout())} >logout</span></LogoutStyle>
+		</UserInfo>
+		<img src={olas} style={olasStyle}  />
+		</Navbar>
 
 		<Outlet/>
 		</div>
