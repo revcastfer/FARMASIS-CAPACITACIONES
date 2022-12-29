@@ -2,7 +2,7 @@
 	{fundamentos:{
 
 	usuarios:{titulo:"administracion de usuarios",descripcion:"ususarios ususarios ususarios ususarios ususarios ususarios", 
-	url:"../components/video de prueba/Administracion de usuarios.m4v"},
+	url:"https://drive.google.com/file/d/1oN6krazTGg8WZJ9ihnAtllPkLDqzV_Nz/view?usp=share_link"},
 
 	precios:{titulo:"Edicion de precios",descripcion:"precios precios precios precios precios precios precios",
 	url: "https://drive.google.com/file/d/1F6WIlqr7kLz6gX7MgiLAURA5XMcKW-K_/view?usp=share_link"},

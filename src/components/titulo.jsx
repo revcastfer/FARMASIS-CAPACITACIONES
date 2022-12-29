@@ -23,7 +23,7 @@ return props.objeto[obj]}
 
 	return(
 		<div>
-		{nameObjs.map(name=><div id={name} onClick={()=>dispatch(selectVideo(search(name))) } > {name} </div>)}
+		{nameObjs.map(name=><li id={name} onClick={()=>dispatch(selectVideo(search(name))) } > {name} </li>)}
 	   </div>)
 
 }

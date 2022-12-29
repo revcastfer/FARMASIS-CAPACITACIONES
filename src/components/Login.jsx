@@ -7,13 +7,24 @@ import fondo from './imgs/fondoLog.jpg';
 import ComboSearch from './ComboSearch'
 import {useDispatch,useSelector} from 'react-redux';
 import {loguin} from './actions.js';
+import logoPie from './imgs/logoPie.png';
 
+const Pie=styled.div`
+background-color:grey;
+height: 65px;
+width: 100%;
+position:absolute;
+bottom:0px;
+opacity: 0.5;
+display:flex;
+justify-content:center;
+align-items:center
 
+`
 
 
 
 const PanInicial=styled.div`
-
 background-image:url(${fondo});
 position:relative;
 display:flex;
@@ -24,9 +35,6 @@ min-width: auto;
 background-attachment: fixed;
 width: 100%;
 height:100vh;
-
-
-
 `
 
 
@@ -39,14 +47,19 @@ border-radius:25px;
 font-size:30px;
 position:absolute;
 color: #033953;
-top:200px;
+top:230px;
 text-align:center;
 padding:15px;
 `
 const imgStyle={width: "auto",
-height: "100px" ,
+height: "130px" ,
 position:"absolute",
 top:"0px",left:"0px"
+};
+
+const imgPie={width: "auto",
+height: "50px" ,
+
 };
 
 const inputs={width: "80%", padding:"8px", borderRadius:"8px",border:"1px solid grey"};
@@ -90,6 +103,7 @@ return(
 	<button style={buton}>ingresar</button>
 	</form>
 	</Ingreso>
+	<Pie><img src={logoPie} style={imgPie} alt="logo cfc"/> </Pie>
 </PanInicial>)
 
 }

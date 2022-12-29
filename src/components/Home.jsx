@@ -13,7 +13,7 @@ display:"block"};
 const olasStyle={height: "35px"};
 
 const userStyle={
-	fontSize:"38px",
+	fontSize:"40px",
 	color:"#01578c",
 };
 
@@ -39,7 +39,7 @@ margin:0px
 const LogoutStyle=styled.div`
 position: absolute;
 right:0px;
-top:35px;
+top:65px;
 color:blue`
 
 const Opciones=styled.div`
@@ -71,7 +71,7 @@ let isLogin=useSelector(state=>state.isloguin);
        </Opciones>
 
 		<UserInfo>
-		<div style={userStyle}>Bienvenido: {user}</div>
+		<h1 style={userStyle}>Bienvenido: {user}</h1>
 		<LogoutStyle><span onClick={()=>dispatch(logout())} >logout</span></LogoutStyle>
 		</UserInfo>
 		<img src={olas} style={olasStyle}  />

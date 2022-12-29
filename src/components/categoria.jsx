@@ -2,6 +2,8 @@
 import Lista from './lista';
 
 
+
+
 export default function Categoria(props){
 
 

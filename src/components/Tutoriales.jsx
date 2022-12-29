@@ -5,12 +5,14 @@ import styled from "styled-components";
 import {useSelector} from 'react-redux';
 
 const Titulovideos=styled.h1`
-font-size: 40px;color: #29d8db
+font-size: 56px;color: #29d8db
 `
 
 const Descripcionvideos=styled.div`
 font-size: 20px;
-color grey
+color grey;
+position:absolute;
+right: 10%
 `
 
 const ContenedorVideos=styled.div`
@@ -23,7 +25,7 @@ export default function Tutoriales(){
 let descripcion=useSelector((state)=>state.descripcion);
 let url=useSelector((state)=>state.url);
 
-return	(<div>	
+return	(	
    <ContenedorVideos>
 	<Categoria data={data} />
 	<div>
@@ -33,6 +35,5 @@ return	(<div>
 
 	</div>
 	</ContenedorVideos>
-
-</div>)
+)
 }
