@@ -19,23 +19,23 @@ border:"none", backgroundColor:"#09b5c1"};
 
 export default function Referidos(){
 
-
+let handleSubmit=(e)=>{alert("prueba submit");e.preventDefault()  }
 
 	return(
 		<div>
 
 		<div>
-		<form>
+		<form onSubmit={handleSubmit}>
 		
 		<TipoDatos>tus datos:</TipoDatos>
-	    <ImputsReferidos placeholder="tus nombre: " type="text"/>
-		<ImputsReferidos placeholder="tus apellidos:" type="text"/>
-		<ImputsReferidos placeholder="tu numero de contacto:" type="phone"/>
-		<ImputsReferidos placeholder="relacion con el referido:" type="text"/>
+	    <ImputsReferidos placeholder="Tus nombres: " type="text"/>
+		<ImputsReferidos placeholder="Tus apellidos:" type="text"/>
+		<ImputsReferidos placeholder="Tu numero de contacto:" type="tel"/>
+		<ImputsReferidos placeholder="Tu relacion con el referido:" type="text"/>
 		<TipoDatos>datos del referido:</TipoDatos>
-		<ImputsReferidos placeholder="nombre del referido:" type="text"/>
-		<ImputsReferidos placeholder="apellido del referido" type="text"/>
-		<ImputsReferidos placeholder="numero de contacto del referido" type="phone"/>
+		<ImputsReferidos placeholder="Nombre del referido:" type="text"/>
+		<ImputsReferidos placeholder="Apellido del referido" type="text"/>
+		<ImputsReferidos placeholder="Numero de contacto del referido" type="phone"/>
 		<button style={butonStyle}>enviar</button>
 		</form>
 		</div>

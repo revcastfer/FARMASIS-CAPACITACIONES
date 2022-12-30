@@ -1,63 +1,87 @@
 import styled from "styled-components";
 import {useDispatch,useSelector} from 'react-redux';
 import {logout} from './actions.js';
-import {Outlet} from 'react-router-dom'
-import {Navigate} from 'react-router-dom'
-import logo from './imgs/logosinfondo.png';
+import {} from 'react-router-dom'
+import {Navigate,Outlet,NavLink} from 'react-router-dom'
+import logo from './imgs/logosinfondo 2.png';
 import olas from './imgs/olas.jpg';
 
 const imgStyle={width: "200px",
 height: "100px" ,
-display:"block"};
-
-const olasStyle={height: "35px"};
-
-const userStyle={
-	fontSize:"40px",
-	color:"#01578c",
+position:"relative",
+left: "40px",
+top:"10px"
 };
 
+const olasStyle={height: "18px"};
 
+const userStyle={
+	fontSize:"38px",
+	color:"#033953",
+};
+
+const inicialStyle={
+	backgroundColor: "purple",
+	width: "60px",
+    height: "60px" ,
+    borderRadius:"45px",
+    margin:"5px",
+    fontSize:"50px",
+    color:"white",
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center"
+   
+
+
+}
 
 
 const Navbar=styled.div`
 position: relative;
 flex-direction: column;
 display: flex;
-background-color: #eeeeee;
+background-color: #09b5c1;
 
 `
 const UserInfo=styled.div`
 position: absolute;
-right:0px;
-top:0px;
+right:10px;
+top:10px;
 display: flex;
-justify-content:flex-end;
-flex-direction: column;
 margin:0px
 `
 const LogoutStyle=styled.div`
 position: absolute;
-right:0px;
-top:65px;
-color:blue`
+right:81px;
+top:40px;
+color:red;
+font-size:25px`
 
 const Opciones=styled.div`
 position: relative;
 display: flex;
-justify-content: space-around`
+justify-content: space-around;
+`
+
+const NavOptionStyle={
+	fontSize:"20px",
+	color:"white",
+}
+
 
 
 
 export default function Home(){
 
-
-let dispatch=useDispatch();
-let user=useSelector(state=>state.usuario);
 let isLogin=useSelector(state=>state.isloguin);
-    if(isLogin==="false"){
-	return <Navigate to="/" /> }
+let dispatch=useDispatch();
+let user=useSelector(state=>state.usuario); 
 
+let handleLogout=()=>{dispatch(logout())}
+
+if(isLogin==="false"){
+	return <Navigate to="/" /> }
 	return (
 		<div>
 		<Navbar>
@@ -66,14 +90,20 @@ let isLogin=useSelector(state=>state.isloguin);
 		
 
         <Opciones>
-		<div>Referidos </div>
-		<div>Video-tutoriales</div>
+		<NavLink to="/Home/Referidos" style={NavOptionStyle}>Referidos </NavLink>
+		<NavLink to="/Home/Tutoriales" style={NavOptionStyle}>Video-tutoriales</NavLink>
        </Opciones>
 
+
+       <div>
 		<UserInfo>
-		<h1 style={userStyle}>Bienvenido: {user}</h1>
-		<LogoutStyle><span onClick={()=>dispatch(logout())} >logout</span></LogoutStyle>
+		<span style={userStyle}>Bienvenido: {user}</span><div style={inicialStyle}>{user[0]}</div>
+		<LogoutStyle><span onClick={handleLogout} >Logout</span></LogoutStyle>
 		</UserInfo>
+		
+		</div>
+
+
 		<img src={olas} style={olasStyle}  />
 		</Navbar>
 

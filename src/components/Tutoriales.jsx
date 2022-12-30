@@ -5,14 +5,21 @@ import styled from "styled-components";
 import {useSelector} from 'react-redux';
 
 const Titulovideos=styled.h1`
-font-size: 56px;color: #29d8db
-`
+font-size: 56px;color: #f5b041
+`;
+
+
+let reproductor=styled.div`
+@media (min-width:720px){
+	background-color:#F6FDFB;}`
+
+
 
 const Descripcionvideos=styled.div`
 font-size: 20px;
 color grey;
 position:absolute;
-right: 10%
+right: 5%
 `
 
 const ContenedorVideos=styled.div`
@@ -28,12 +35,12 @@ let url=useSelector((state)=>state.url);
 return	(	
    <ContenedorVideos>
 	<Categoria data={data} />
-	<div>
+	<reproductor>
 		<Titulovideos>{titulo}</Titulovideos>
 		<video src={url}/>
 		<Descripcionvideos>{descripcion}</Descripcionvideos>
 
-	</div>
+	</reproductor>
 	</ContenedorVideos>
 )
 }

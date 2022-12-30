@@ -74,14 +74,13 @@ export default function Login(){
 
 let dispatch=useDispatch();
 let usuario="";
+let isLogin=useSelector(state=>state.isloguin);
 
 window.onload=function(){usuario=document.querySelector("#usuario").value};
 
 let handleChangeUserImput=(e)=>{ usuario= e.target.value  };
 let handleSubmit=(e)=>{e.preventDefault();dispatch(loguin(usuario))};
 
-let isLogin=useSelector(state=>state.isloguin);
-console.log(isLogin);
 if(isLogin==="true"){
 	return <Navigate to="./Home/Tutoriales" /> }
 
