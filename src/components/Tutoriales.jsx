@@ -3,15 +3,17 @@ import Categoria from './categoria';
 import data from '../data/data.js'
 import styled from "styled-components";
 import {useSelector} from 'react-redux';
+import Media from 'react-media';
 
 const Titulovideos=styled.h1`
-font-size: 56px;color: #f5b041
+font-size: 56px;color: #f5b041;
+left:0px
 `;
 
 
-let reproductor=styled.div`
-@media (min-width:720px){
-	background-color:#F6FDFB;}`
+let Reproductor=styled.div`
+@media (max-width:800px){
+	display:none;}`
 
 
 
@@ -35,12 +37,12 @@ let url=useSelector((state)=>state.url);
 return	(	
    <ContenedorVideos>
 	<Categoria data={data} />
-	<reproductor>
+	<Reproductor>
 		<Titulovideos>{titulo}</Titulovideos>
 		<video src={url}/>
 		<Descripcionvideos>{descripcion}</Descripcionvideos>
 
-	</reproductor>
+	</Reproductor>
 	</ContenedorVideos>
 )
 }

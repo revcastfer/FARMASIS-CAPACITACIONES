@@ -21,14 +21,11 @@ const demo=[
 
 export default function ComboSearch(){
 
-	let [selection,setselection]=React.useState("");
-	let handleSelectChange=(e)=>{
-       setselection(e.value);console.log(e.value)};
 
 return(<div>
 	<Select  defaultValue={{label:"---seleccionar---", value:"null"}}
 	options ={demo} 
-	 onChange ={handleSelectChange} />
+	 />
 
 
 

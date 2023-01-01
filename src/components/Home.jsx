@@ -5,6 +5,8 @@ import {} from 'react-router-dom'
 import {Navigate,Outlet,NavLink} from 'react-router-dom'
 import logo from './imgs/logosinfondo 2.png';
 import olas from './imgs/olas.jpg';
+import Media from 'react-media';
+import baner from './imgs/baner.JPG'
 
 const imgStyle={width: "200px",
 height: "100px" ,
@@ -15,10 +17,13 @@ top:"10px"
 
 const olasStyle={height: "18px"};
 
-const userStyle={
-	fontSize:"38px",
-	color:"#033953",
-};
+const UserStyle=styled.span`
+	font-size:38px;
+	color:#033953;
+	@media (max-width:800px){
+	font-size:25px;}`
+	
+
 
 const inicialStyle={
 	backgroundColor: "purple",
@@ -41,7 +46,9 @@ const Navbar=styled.div`
 position: relative;
 flex-direction: column;
 display: flex;
-background-color: #09b5c1;
+background-image:url(${baner});
+background-size:cover;
+background-repeat: no-repeat;
 
 `
 const UserInfo=styled.div`
@@ -49,7 +56,8 @@ position: absolute;
 right:10px;
 top:10px;
 display: flex;
-margin:0px
+margin:0px;
+
 `
 const LogoutStyle=styled.div`
 position: absolute;
@@ -97,7 +105,7 @@ if(isLogin==="false"){
 
        <div>
 		<UserInfo>
-		<span style={userStyle}>Bienvenido: {user}</span><div style={inicialStyle}>{user[0]}</div>
+		<UserStyle>Bienvenido: {user}</UserStyle><div style={inicialStyle}>{user[0]}</div>
 		<LogoutStyle><span onClick={handleLogout} >Logout</span></LogoutStyle>
 		</UserInfo>
 		
