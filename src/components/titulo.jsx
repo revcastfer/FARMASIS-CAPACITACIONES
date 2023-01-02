@@ -8,14 +8,14 @@ const VideoDiv=styled.div`
 display:block;
 width: 100%;
 height:350px;
-@media (min-width:800px){
+@media (min-width:900px){
 	display:none;}
 
 `
-const MenuStyle=styled.span`
+const MenuStyle=styled.li`
 font-size: 30px;
 color:grey;
-@media (min-width:800px){
+@media (min-width:900px){
 	font-size:18px;}
 `
 

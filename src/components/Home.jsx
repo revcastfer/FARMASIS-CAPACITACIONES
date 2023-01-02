@@ -3,7 +3,7 @@ import {useDispatch,useSelector} from 'react-redux';
 import {logout} from './actions.js';
 import {} from 'react-router-dom'
 import {Navigate,Outlet,NavLink} from 'react-router-dom'
-import logo from './imgs/logosinfondo 2.png';
+import logo from './imgs/logosinfondo.png';
 import olas from './imgs/olas.jpg';
 import Media from 'react-media';
 import baner from './imgs/baner.JPG'
@@ -20,7 +20,7 @@ const olasStyle={height: "18px"};
 const UserStyle=styled.span`
 	font-size:38px;
 	color:#033953;
-	@media (max-width:800px){
+	@media (max-width:900px){
 	font-size:25px;}`
 	
 
@@ -74,7 +74,7 @@ justify-content: space-around;
 
 const NavOptionStyle={
 	fontSize:"20px",
-	color:"white",
+	color:"#033953",
 }
 
 

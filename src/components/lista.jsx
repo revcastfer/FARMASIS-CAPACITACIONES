@@ -8,7 +8,8 @@ display:"inline"
 }
 
 const grupoStylo={
-    color:"#01578c",display:"inline"
+    color:"#01578c",display:"inline",
+    fontSize: "23px"
 }
 
 export default function Lista(props){

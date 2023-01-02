@@ -6,13 +6,13 @@ import {useSelector} from 'react-redux';
 import Media from 'react-media';
 
 const Titulovideos=styled.h1`
-font-size: 56px;color: #f5b041;
+font-size: 60px;color: #f5b041;
 left:0px
 `;
 
 
 let Reproductor=styled.div`
-@media (max-width:800px){
+@media (max-width:900px){
 	display:none;}`
 
 
