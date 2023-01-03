@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import {useDispatch,useSelector} from 'react-redux';
 import {logout} from './actions.js';
-import {} from 'react-router-dom'
 import {Navigate,Outlet,NavLink} from 'react-router-dom'
-import logo from './imgs/logosinfondo.png';
-import olas from './imgs/olas.jpg';
+import logo from './imgs/logosinfondo 3.png';
+import baner1 from './imgs/baner1.jpg'
+
 import Media from 'react-media';
 import baner from './imgs/baner.JPG'
 
@@ -15,10 +15,14 @@ left: "40px",
 top:"10px"
 };
 
-const olasStyle={height: "18px"};
+const baner1Style={position: "absolute",maxWidth: "300px",
+height: "123px"};
+
+const banerStyle={position: "absolute",minWidth: "80%",
+height: "124px",left:"300px"};
 
 const UserStyle=styled.span`
-	font-size:38px;
+	font-size:45px;
 	color:#033953;
 	@media (max-width:900px){
 	font-size:25px;}`
@@ -27,11 +31,11 @@ const UserStyle=styled.span`
 
 const inicialStyle={
 	backgroundColor: "purple",
-	width: "60px",
-    height: "60px" ,
+	width: "65px",
+    height: "65px" ,
     borderRadius:"45px",
     margin:"5px",
-    fontSize:"50px",
+    fontSize:"45px",
     color:"white",
     display:"flex",
     justifyContent:"center",
@@ -46,9 +50,9 @@ const Navbar=styled.div`
 position: relative;
 flex-direction: column;
 display: flex;
-background-image:url(${baner});
-background-size:cover;
-background-repeat: no-repeat;
+
+
+
 
 `
 const UserInfo=styled.div`
@@ -70,10 +74,12 @@ const Opciones=styled.div`
 position: relative;
 display: flex;
 justify-content: space-around;
+width:80%;
+left:300px
 `
 
 const NavOptionStyle={
-	fontSize:"20px",
+	fontSize:"24px",
 	color:"#033953",
 }
 
@@ -93,8 +99,10 @@ if(isLogin==="false"){
 	return (
 		<div>
 		<Navbar>
-		
+		<img src={baner} style={banerStyle}/>
+		<img src={baner1} style={baner1Style}/>
 		<img src={logo} style={imgStyle}/>
+		
 		
 
         <Opciones>
@@ -112,7 +120,7 @@ if(isLogin==="false"){
 		</div>
 
 
-		<img src={olas} style={olasStyle}  />
+		
 		</Navbar>
 
 		<Outlet/>

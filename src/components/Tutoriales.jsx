@@ -25,7 +25,8 @@ right: 5%
 `
 
 const ContenedorVideos=styled.div`
-display:flex
+display:flex;
+
 
 `
 

@@ -4,6 +4,10 @@ import Media from 'react-media';
 import RefeImagen from './imgs/referidos.jpeg'
 import soporteImagen from './imgs/soporte.jpeg'
 
+
+const Formulario=styled.form`
+width:50%`
+
 const ImputsReferidos=styled.input`
 display:block;
 margin:20px;
@@ -23,24 +27,25 @@ border:"none", backgroundColor:"#09b5c1"};
 const Contenedor=styled.div`
 display:flex;
 @media (max-width:900px){
-justify-content:center;
+justify-content:center}`
 
-}`
 
-const Imagen=styled.div`
-width:55%;
-height:100%;
+
+const ImagenesDerecha=styled.div`
 display:flex;
-flex-direction:row;
+min-width:352px;
+
+justify-content:center;
 `
 
-const Imagen2= {Media (maxWidth:"900px"){
-display:none} }
+const ImagenStyle={
+height:"625px"}
 
 
 
-const Formulario=styled.form`
-width:50%`
+
+
+
 
 export default function Referidos(){
 
@@ -64,14 +69,9 @@ let handleSubmit=(e)=>{alert("prueba submit");e.preventDefault()  }
 		<button style={butonStyle}>enviar</button>
 		</Formulario>
 
-		<Imagen>
-		<img  src={RefeImagen}/>
-
-		
-		<img style={Imagen2} src={soporteImagen}/>
-		
-
-		</Imagen>
+		<ImagenesDerecha>
+		<img  style={ImagenStyle} src={RefeImagen}/>
+		</ImagenesDerecha>
 
 
 
