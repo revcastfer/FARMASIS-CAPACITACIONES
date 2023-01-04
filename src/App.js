@@ -7,10 +7,10 @@ import Tutoriales from './components/Tutoriales.jsx'
 import Referidos from './components/referidos.jsx'
 
 
-
-
+document.body.style.margin="0px";
 
 function App() {
+  
   return (
   
     <Routes>

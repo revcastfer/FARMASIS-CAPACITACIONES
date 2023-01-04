@@ -6,7 +6,10 @@ import soporteImagen from './imgs/soporte.jpeg'
 
 
 const Formulario=styled.form`
-width:50%`
+width:50%;
+position:relative;
+left:60px;
+top:40px`
 
 const ImputsReferidos=styled.input`
 display:block;
@@ -14,7 +17,7 @@ margin:20px;
 height:30px;
 width:80%;
 border-radius:10px;
-border: 1px solid grey`
+border: 1px solid grey;`
 
 const TipoDatos=styled.div`
 color:#09b5c1;
@@ -26,8 +29,7 @@ border:"none", backgroundColor:"#09b5c1"};
 
 const Contenedor=styled.div`
 display:flex;
-@media (max-width:900px){
-justify-content:center}`
+`
 
 
 

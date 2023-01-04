@@ -8,6 +8,9 @@ import baner1 from './imgs/baner1.jpg'
 import Media from 'react-media';
 import baner from './imgs/baner.JPG'
 
+const linkActivo={color:"red",fontSize:"24px"
+}
+
 const imgStyle={width: "200px",
 height: "100px" ,
 position:"relative",
@@ -15,17 +18,25 @@ left: "40px",
 top:"10px"
 };
 
-const baner1Style={position: "absolute",maxWidth: "300px",
-height: "123px"};
+const banerLogoStyle={position: "absolute",mminWidth: "300px",
+height: "128px",left:"-25px"};
 
-const banerStyle={position: "absolute",minWidth: "80%",
+
+
+
+const banerStyle={position: "absolute",maxWidth: "100%",
 height: "124px",left:"300px"};
 
 const UserStyle=styled.span`
-	font-size:45px;
+    	font-size:45px;
+    	font-weight: bold;
 	color:#033953;
 	@media (max-width:900px){
-	font-size:25px;}`
+	font-size:25px;
+	@media (max-width:700px){
+	font-size:18px;
+
+}`
 	
 
 
@@ -50,6 +61,8 @@ const Navbar=styled.div`
 position: relative;
 flex-direction: column;
 display: flex;
+background-image:url(${baner});
+background-size:cover;
 
 
 
@@ -58,10 +71,9 @@ display: flex;
 const UserInfo=styled.div`
 position: absolute;
 right:10px;
-top:10px;
+top:1px;
 display: flex;
 margin:0px;
-
 `
 const LogoutStyle=styled.div`
 position: absolute;
@@ -75,7 +87,12 @@ position: relative;
 display: flex;
 justify-content: space-around;
 width:80%;
-left:300px
+left:300px;
+@media (max-width:900px){
+justify-content:space-evenly;
+left:220px;
+
+}
 `
 
 const NavOptionStyle={
@@ -99,8 +116,8 @@ if(isLogin==="false"){
 	return (
 		<div>
 		<Navbar>
-		<img src={baner} style={banerStyle}/>
-		<img src={baner1} style={baner1Style}/>
+		
+		<img src={baner1} style={banerLogoStyle}/>
 		<img src={logo} style={imgStyle}/>
 		
 		
@@ -113,7 +130,7 @@ if(isLogin==="false"){
 
        <div>
 		<UserInfo>
-		<UserStyle>Bienvenido: {user}</UserStyle><div style={inicialStyle}>{user[0]}</div>
+		<UserStyle>Bienvenido: {user}</UserStyle><div style={NavOptionStyle}>{user[0]}</div>
 		<LogoutStyle><span onClick={handleLogout} >Logout</span></LogoutStyle>
 		</UserInfo>
 		
