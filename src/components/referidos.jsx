@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
-import Media from 'react-media';
 import RefeImagen from './imgs/referidos.jpeg'
-import soporteImagen from './imgs/soporte.jpeg'
+import RefeImagencompleta from './imgs/referidosCompleto.jpeg'
+import fondoHex from './imgs/fondoHexagonos.jpg'
 
 
 const Formulario=styled.form`
 width:50%;
 position:relative;
-left:60px;
-top:40px`
+background-image:url(${fondoHex});
+background-size:contain`
 
 const ImputsReferidos=styled.input`
 display:block;
@@ -17,7 +17,7 @@ margin:20px;
 height:30px;
 width:80%;
 border-radius:10px;
-border: 1px solid grey;`
+border: 1px solid grey`
 
 const TipoDatos=styled.div`
 color:#09b5c1;
@@ -29,19 +29,27 @@ border:"none", backgroundColor:"#09b5c1"};
 
 const Contenedor=styled.div`
 display:flex;
+min-height:600px;
 `
 
 
 
 const ImagenesDerecha=styled.div`
 display:flex;
-min-width:352px;
+background-size:cover;
+background-repeat:no-repeat;
+width:50%;
+height:0px
 
 justify-content:center;
+background-image:url(${RefeImagencompleta});
+@media (max-width:900px){
+background-image:url(${RefeImagen});
+right:0px}
 `
 
-const ImagenStyle={
-height:"625px"}
+const formCentrar={position:"absolute",left:"8%", top:"7%",
+width:"100%"}
 
 
 
@@ -58,7 +66,7 @@ let handleSubmit=(e)=>{alert("prueba submit");e.preventDefault()  }
 
 		<Contenedor>
 		<Formulario  onSubmit={handleSubmit}>
-		
+		<div style={formCentrar}>
 		<TipoDatos>tus datos:</TipoDatos>
 	    <ImputsReferidos placeholder="Tus nombres: " type="text"/>
 		<ImputsReferidos placeholder="Tus apellidos:" type="text"/>
@@ -69,10 +77,12 @@ let handleSubmit=(e)=>{alert("prueba submit");e.preventDefault()  }
 		<ImputsReferidos placeholder="Apellido del referido" type="text"/>
 		<ImputsReferidos placeholder="Numero de contacto del referido" type="phone"/>
 		<button style={butonStyle}>enviar</button>
+		</div>
+
 		</Formulario>
 
 		<ImagenesDerecha>
-		<img  style={ImagenStyle} src={RefeImagen}/>
+		
 		</ImagenesDerecha>
 
 

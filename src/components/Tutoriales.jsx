@@ -3,10 +3,10 @@ import Categoria from './categoria';
 import data from '../data/data.js'
 import styled from "styled-components";
 import {useSelector} from 'react-redux';
-import Media from 'react-media';
+import fondoHex from './imgs/fondoHexagonos.jpg'
 
 const Titulovideos=styled.h1`
-font-size: 60px;color: #f5b041;
+font-size: 50px;color: #f5b041;
 left:0px
 `;
 
@@ -26,6 +26,11 @@ right: 5%
 
 const ContenedorVideos=styled.div`
 display:flex;
+background-image:url(${fondoHex});
+background-size:cover;
+@media (max-width:900px){
+	background-size:contain;
+	}
 
 
 `

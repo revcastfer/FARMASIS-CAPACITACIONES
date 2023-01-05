@@ -18,17 +18,16 @@ left: "40px",
 top:"10px"
 };
 
-const banerLogoStyle={position: "absolute",mminWidth: "300px",
-height: "128px",left:"-25px"};
+const banerLogoStyle={position: "absolute",left:'-20px',
+height: "128px"};
 
 
 
 
-const banerStyle={position: "absolute",maxWidth: "100%",
-height: "124px",left:"300px"};
+
 
 const UserStyle=styled.span`
-    	font-size:45px;
+    	font-size:35px;
     	font-weight: bold;
 	color:#033953;
 	@media (max-width:900px){
@@ -130,7 +129,7 @@ if(isLogin==="false"){
 
        <div>
 		<UserInfo>
-		<UserStyle>Bienvenido: {user}</UserStyle><div style={NavOptionStyle}>{user[0]}</div>
+		<UserStyle>Bienvenido: {user}</UserStyle><div style={inicialStyle}>{user[0]}</div>
 		<LogoutStyle><span onClick={handleLogout} >Logout</span></LogoutStyle>
 		</UserInfo>
 		
