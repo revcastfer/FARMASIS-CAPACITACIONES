@@ -18,7 +18,8 @@ bottom:0px;
 opacity: 0.5;
 display:flex;
 justify-content:center;
-align-items:center
+align-items:center;
+bottom:0px
 
 `
 
@@ -32,7 +33,6 @@ justify-content:center;
 background-size:cover;
 background-repeat: no-repeat;
 min-width: auto;
-background-attachment: fixed;
 width: 100%;
 height:100vh;
 `
@@ -41,24 +41,28 @@ height:100vh;
 const Ingreso=styled.div`
 background-color:#F6FDFB;
 border: 3px solid #09b5c1;
-width: 400px;
-height: 300px; 
+width: 380px;
+Min-Height: 40%; 
+
+
+
 border-radius:25px;
 font-size:30px;
 position:absolute;
 color: #033953;
-top:230px;
+top:35%;
 text-align:center;
 padding:15px;
 `
 const imgStyle={width: "auto",
-height: "130px" ,
+maxHeight: "18%" ,
 position:"absolute",
 top:"0px",left:"0px"
 };
 
 const imgPie={width: "auto",
 height: "50px" ,
+
 
 };
 

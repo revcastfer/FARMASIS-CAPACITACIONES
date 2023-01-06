@@ -97,6 +97,7 @@ left:220px;
 const NavOptionStyle={
 	fontSize:"24px",
 	color:"#033953",
+	fontWeight:"bold"
 }
 
 
