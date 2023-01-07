@@ -43,9 +43,6 @@ background-color:#F6FDFB;
 border: 3px solid #09b5c1;
 width: 380px;
 Min-Height: 40%; 
-
-
-
 border-radius:25px;
 font-size:30px;
 position:absolute;

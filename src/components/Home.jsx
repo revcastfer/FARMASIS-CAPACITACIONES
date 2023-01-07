@@ -4,12 +4,10 @@ import {logout} from './actions.js';
 import {Navigate,Outlet,NavLink} from 'react-router-dom'
 import logo from './imgs/logosinfondo 3.png';
 import baner1 from './imgs/baner1.jpg'
-
+import Redirect from 'react-router-dom'
 import Media from 'react-media';
 import baner from './imgs/baner.JPG'
 
-const linkActivo={color:"red",fontSize:"24px"
-}
 
 const imgStyle={width: "200px",
 height: "100px" ,
@@ -26,7 +24,7 @@ height: "128px"};
 
 
 
-const UserStyle=styled.span`
+const UserName=styled.span`
     	font-size:35px;
     	font-weight: bold;
 	color:#033953;
@@ -39,7 +37,7 @@ const UserStyle=styled.span`
 	
 
 
-const inicialStyle={
+const inicialLetterStyle={
 	backgroundColor: "purple",
 	width: "65px",
     height: "65px" ,
@@ -74,14 +72,14 @@ top:1px;
 display: flex;
 margin:0px;
 `
-const LogoutStyle=styled.div`
+const Logout=styled.div`
 position: absolute;
 right:81px;
 top:40px;
 color:red;
 font-size:25px`
 
-const Opciones=styled.div`
+const DivOpcionsNav=styled.div`
 position: relative;
 display: flex;
 justify-content: space-around;
@@ -94,12 +92,18 @@ left:220px;
 }
 `
 
-const NavOptionStyle={
-	fontSize:"24px",
-	color:"#033953",
-	fontWeight:"bold"
-}
 
+
+
+const otionsLinksNavbar=({isActive})=>{
+	return{
+		
+	color: isActive ? 'orange':'#033953',
+	fontWeight: isActive? "bold" : 'normal',
+	textDecoration: isActive? "none" : 'underline',
+	fontSize:'24px',
+}
+}
 
 
 
@@ -122,16 +126,16 @@ if(isLogin==="false"){
 		
 		
 
-        <Opciones>
-		<NavLink to="/Home/Referidos" style={NavOptionStyle}>Referidos </NavLink>
-		<NavLink to="/Home/Tutoriales" style={NavOptionStyle}>Video-tutoriales</NavLink>
-       </Opciones>
+        <DivOpcionsNav>
+		<NavLink exact to="/Home/Referidos" style={otionsLinksNavbar} >Referidos </NavLink>
+		<NavLink exact to="/Home/Tutoriales" style={otionsLinksNavbar} >Video-tutoriales</NavLink>
+       </DivOpcionsNav>
 
 
        <div>
 		<UserInfo>
-		<UserStyle>Bienvenido: {user}</UserStyle><div style={inicialStyle}>{user[0]}</div>
-		<LogoutStyle><span onClick={handleLogout} >Logout</span></LogoutStyle>
+		<UserName>Bienvenido: {user}</UserName><div style={inicialLetterStyle}>{user[0]}</div>
+		<Logout><span onClick={handleLogout} >Logout</span></Logout>
 		</UserInfo>
 		
 		</div>
