@@ -9,7 +9,7 @@ import Media from 'react-media';
 import baner from './imgs/baner.JPG'
 
 
-const imgStyle={width: "200px",
+const logoStyle={width: "200px",
 height: "100px" ,
 position:"relative",
 left: "40px",
@@ -60,6 +60,7 @@ flex-direction: column;
 display: flex;
 background-image:url(${baner});
 background-size:cover;
+background-repeat: no-repeat
 
 
 
@@ -77,7 +78,9 @@ position: absolute;
 right:81px;
 top:40px;
 color:red;
-font-size:25px`
+font-size:25px;
+font-weight:bold
+`
 
 const DivOpcionsNav=styled.div`
 position: relative;
@@ -122,7 +125,7 @@ if(isLogin==="false"){
 		<Navbar>
 		
 		<img src={baner1} style={banerLogoStyle}/>
-		<img src={logo} style={imgStyle}/>
+		<img src={logo} style={logoStyle}/>
 		
 		
 
