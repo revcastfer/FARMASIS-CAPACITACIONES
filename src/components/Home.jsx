@@ -130,8 +130,8 @@ if(isLogin==="false"){
 		
 
         <DivOpcionsNav>
-		<NavLink exact to="/Home/Referidos" style={otionsLinksNavbar} >Referidos </NavLink>
-		<NavLink exact to="/Home/Tutoriales" style={otionsLinksNavbar} >Video-tutoriales</NavLink>
+		<NavLink  to="/Home/Referidos" style={otionsLinksNavbar} >Referidos </NavLink>
+		<NavLink  to="/Home/Tutoriales" style={otionsLinksNavbar} >Video-tutoriales</NavLink>
        </DivOpcionsNav>
 
 
